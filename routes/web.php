@@ -29,3 +29,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Multiple Middlewares in Single Route
 Route::get('admin/routes', 'HomeController@admin')->middleware(['auth','admin'])->name('admin');
+
+// Test for new facade
+Route::get('/test', function () {
+    dd(NNWT::getName());
+});
