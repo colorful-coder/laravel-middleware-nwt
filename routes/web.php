@@ -32,5 +32,5 @@ Route::get('admin/routes', 'HomeController@admin')->middleware(['auth','admin'])
 
 // Test for new facade
 Route::get('/test', function () {
-    dd(NNWT::getName());
+    dd(NNWT::getName(), NNWT::getYourName());
 });
