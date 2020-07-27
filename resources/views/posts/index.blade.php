@@ -10,7 +10,8 @@
     <div class="card">
         <div class="card-header h3">
             Posts
-            <a href="{{ route('posts.create') }}" class="btn btn-info float-right">New Post
+            <a href="{{ route('posts.create') }}" 
+                class="btn btn-outline-primary float-right">New Post
             </a>
         </div>
         <div class="panel-body py-3 pl-4">
@@ -21,7 +22,7 @@
                             <td>ID</td>
                             <td>Title</td>
                             <td>Content</td>
-                            <td colspan="2">Actions</td>
+                            <td colspan="2" class="text-center">Actions</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,9 +31,9 @@
                                 <td>{{ $post->id }}</td>
                                 <td>{{ $post->title }}</td>
                                 <td>{{ $post->content }}</td>
-                                <td>
+                                <td class="text-right">
                                     <a href="{{ route('posts.edit', $post->id) }}"
-                                        class="btn btn-primary">Edit
+                                        class="btn btn-outline-primary">Edit
                                     </a>
                                 </td>
                                 <td>
@@ -40,7 +41,7 @@
                                         method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn btn-danger" type="submit">
+                                        <button class="btn btn-outline-danger" type="submit">
                                             Delete
                                         </button>
                                     </form>
